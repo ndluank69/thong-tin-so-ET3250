@@ -1,0 +1,39 @@
+% Khung bài tập tín hiệu 4 mức, vẽ lại từ hình mẫu.
+% Dùng trong tài liệu đã nạp gói tikz bằng lệnh \input{...}.
+\begin{tikzpicture}[
+    x=1.5cm,
+    y=0.6cm,
+    font=\small\bfseries\boldmath,
+    line width=1.1pt,
+    line cap=round
+]
+    \begin{scope}[draw=black, text=black]
+        % Sáu vạch chia tạo thành năm khoảng ký hiệu, mỗi khoảng hai bit.
+        \foreach \boundary in {0,...,5} {
+            \draw (\boundary, -3.6) -- (\boundary, 3.6);
+        }
+
+        % Đường ngang ở giữa khung.
+        \draw (0, 0) -- (5.85, 0);
+
+        \node[anchor=east] at (-0.45, 3.6) {$S_t=$};
+        \node[anchor=east, align=left] at (-0.45, 0)
+            {Tín hiệu 4\\mức};
+
+        % Giữ nguyên thứ tự các cặp bit trong ảnh.
+        \foreach \position/\bits in {
+            0.5/{1\,0},
+            1.5/{0\,1},
+            2.5/{1\,1},
+            3.5/{0\,0},
+            4.5/{0\,1}
+        } {
+            \node at (\position, 3.05) {$\bits$};
+        }
+
+        % Bốn mức biên độ; hoàn chỉnh các nhãn bị cắt ở mép ảnh.
+        \foreach \level in {3, 1, -1, -3} {
+            \node[anchor=west] at (5.65, \level) {$\level$};
+        }
+    \end{scope}
+\end{tikzpicture}

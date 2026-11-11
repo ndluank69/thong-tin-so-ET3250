@@ -1,0 +1,276 @@
+\chapter{Các khái niệm cơ bản}
+
+\section{Thông tin}
+
+\textbf{- Thông tin:} là cái mà con người trao đổi với nhau
+
+\noindent\textbf{Ví dụ:}
+
++ Âm thanh
+
++ Hình ảnh
+
++ Dữ liệu
+
+\section{Tín hiệu truyền}
+- Tín hiệu truyền có 2 loại: \textcolor{red}{digital signal} và \textcolor{red}{analag signal}.
+
+\subsection{Analog signal}
+\textbf{- Định nghĩa: }\textcolor{red}{Tín hiệu tương tự} là tín hiệu có biên độ thay đổi theo thời gian.
+\begin{center}
+    \input{figures/tin_hieu_tuong_tu.tex}
+\end{center}
+
+\vspace{18pt}
+- Có hai tham số đặc trưng: 
+
++ Biên độ (cường độ) - Voltage (V)
+
++ Dải tần
+
+\hspace*{1cm}
+$
+\begin{aligned}
+    &\boxed{W = |f_{min} - f_{max}|}\\[6pt]
+    &\boxed{B = f_{max} - f_{min}} \text{ - Băng thông (độ rộng băng thông)}
+\end{aligned}
+$
+
+\noindent\textbf{Ví dụ: } Âm thanh mà con người nghe được là từ $16 - 20000$ (Hz)
+
+\noindent\textbf{Ví dụ: } Âm thanh thoại từ $300 - 3400$ (Hz)
+
+\noindent\textbf{Ví dụ: } Băng thông một kênh truyền hình tương tự: $0 - 6.5$ (MHz)
+
+\subsection{Digital signal}
+\begin{center}
+    \input{figures/tin_hieu_so.tex}
+\end{center}
+
+\textbf{- Định nghĩa: }\textcolor{red}{Digital signal} là tín hiệu có biên độ thay đổi rời rạc theo thời gian
+
+- Có hai tham số đặc trưng:
+
+\hspace*{1cm}+ Tối thiểu hai mức
+
+\hspace*{1cm}+ Tốc độ truyền: $bit/s$, $b/s$, $bps$
+
+\section{Ví dụ tín hiệu 2 mức}
+$t_b$: Thời gian truyền 1 bit
+
+$
+    \begin{aligned}
+        \boxed{v_b = \dfrac{1}{t_b} \quad (bit/s)} \quad \text{Tốc độ bit}
+    \end{aligned}
+$
+
+Bit 0 = 0V
+
+Bit 1 = 1V
+
+\noindent\textbf{Ví dụ:} Download 1 file kích thước 1 GB từ internet về mất 5 phút. Tính tốc độ download?
+
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+1 GB = $1024$ MB
+
+5 phút = 300 giây
+
+$\rightarrow v_b = \dfrac{1024}{300} = 3.41$ MB/s $= 27.3$ Mb/s
+
+\section{Ví dụ tín hiệu 4 mức}
+1 mức = 2 bit
+
+\noindent\hspace*{1.5cm} 00 = -3V
+
+\noindent\hspace*{1.5cm} 01 = -1V
+
+\noindent\hspace*{1.5cm} 10 = 1V
+
+\noindent\hspace*{1.5cm} 11 = 3V
+
+\noindent\textbf{Ví dụ: }Cho tín hiệu 4 mức với các mức như bên cạnh. Vẽ tín hiệu 4 mức cho dòng bit.
+
+\begin{center}
+    \input{figures/bai_tap_tin_hieu_4_muc.tex}
+\end{center}
+
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+\begin{center}
+    \input{figures/giai_bai_tap_tin_hieu_4_muc.tex}
+\end{center}
+
+\[
+    \begin{alignedat}{3}
+        &t_b\text{: Thời gian 1 bit}
+        &&\qquad\rightarrow \text{Tốc độ bit: }
+        &&v_b = \dfrac{1}{t_b}\quad(\text{bit/s})\\[6pt]
+        &t_B\text{: Thời gian 1 tín hiệu}
+        &&\qquad\rightarrow \text{Tốc độ tín hiệu: }
+        &&v_B = \dfrac{1}{t_B}\quad(\text{baud})
+    \end{alignedat}
+\]
+
+\textbf{- Nhận xét:} 
+\[
+    \boxed{ 
+        \begin{aligned}
+            t_B &= 2 \cdot t_b \\[6pt]
+            v_B &= \dfrac{v_b}{2}
+        \end{aligned}
+    }
+\]
+
+\section{Ví dụ tín hiệu 8 mức}
+1 mức = 3 bit
+
+\noindent\hspace*{1.5cm} 000 = -7V
+
+\noindent\hspace*{1.5cm} 001 = -5V
+
+\noindent\hspace*{1.5cm} 010 = -3V
+
+\noindent\hspace*{1.5cm} 011 = -1V
+
+\noindent\hspace*{1.5cm} 100 = 1V
+
+\noindent\hspace*{1.5cm} 101 = 3V
+
+\noindent\hspace*{1.5cm} 110 = 5V
+
+\noindent\hspace*{1.5cm} 111 = 7V
+
+\noindent\textbf{Ví dụ:} Cho tín hiệu 8 mức với các mức như bên cạnh. Vẽ tín hiệu 8 mức cho dòng bit.
+
+\begin{center}
+    \input{figures/bai_tap_tin_hieu_8_muc.tex}
+\end{center}
+
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+\begin{center}
+    \input{figures/giai_bai_tap_tin_hieu_8_muc.tex}
+\end{center}
+
+\textbf{- Nhận xét}
+\[
+    \boxed{
+        \begin{aligned}
+            &t_B = 3 \cdot t_B\\[6pt]
+            &v_B = \dfrac{v_b}{3}
+        \end{aligned}
+    }
+\]
+
+\noindent\textbf{* Kết luận: } Tổng quát M mức:
+\[
+    \boxed{
+        \begin{aligned}
+            &1 \text{ Mức} &&= \quad \log_2 (M) \quad &&(\text{bit})\\[6pt]
+            &t_B &&= \quad t_b \cdot \log_2 (M) \quad &&(\text{s})\\[6pt]
+            &v_B &&= \quad \dfrac{v_b}{\log_2 (M)} \quad &&(\text{baud})
+        \end{aligned}   
+    }
+\]
+
+\section{Mối quan hệ giữa $B$, $v_b$, $v_B$, $M$, $SNR$}
+$B$: là băng thông.
+
+$v_b$: là tốc độ truyền 1 bit.
+
+$v_B$: là tốc độ truyền 1 tín hiệu.
+
+$M$: là số mức.
+
+$SNR$: là tỉ lệ tín hiệu trên nhiễu.
+
+\subsection{Băng thông ($B$)}
+- Kênh thông tin:
+\[
+    \boxed{B = f_{max} - f{min}} \quad (\text{B thường là hữu hạn})
+\]
+
+\subsection{Tốc độ truyền 1 bit ($v_b$)}
+- Tốc độ truyền 1 bit tối đa (công thức \textbf{Nyquist}):
+\[
+    \boxed{
+        v_{b_{max}} = v_B \cdot \log_2 (M) = 2B \cdot \log_2 (M)
+    }
+\]
+
+- Ngoài ra, liên hệ với SNR (Công thức khác của Shannon):
+\[
+    \boxed{
+        v_{b_{max}} = B \cdot \log_2 (1 + SNR) = B \cdot \log_2 \left( 1 + \dfrac{S}{N} \right)
+    }
+\]
+
+\subsection{Tốc độ truyền 1 tín hiệu ($v_B$)}
+- Tốc độ truyền 1 tín hiệu tối đa:
+\[
+    \boxed{
+        v_{B_{max}} = 2 \cdot B
+    }
+\]
+
+\subsection{Số mức ($M$)}
+- Tổng quát M mức:
+\[
+    \boxed{
+        \begin{aligned}
+            &1 \text{ Mức} &&= \quad \log_2 (M) \quad &&(\text{bit})\\[6pt]
+            &t_B &&= \quad t_b \cdot \log_2 (M) \quad &&(\text{s})\\[6pt]
+            &v_B &&= \quad \dfrac{v_b}{\log_2 (M)} \quad &&(\text{baud})
+        \end{aligned}   
+    }
+\]
+
+\subsection{Tỉ lệ tín hiệu trên nhiễu ($SNR$)}
+- Công thức:
+\[
+    \boxed{SNR = \dfrac{\text{Công suất tín hiệu}}{\text{Công suất nhiễu}} = \dfrac{S}{N}}
+\]
+
+\noindent\hspace*{2cm}Trong đó:
+
+\noindent\hspace*{2.5cm}S: Công suất bằng tổng bình phương của biên độ
+\[
+    \boxed{
+        S = \sum v^2
+    }
+\]
+
+\noindent\hspace*{2.5cm}N: Chất lượng của đường truyền
+
+- Hiệu quả sử dụng băng thông:
+\[
+    \boxed{\mu = \dfrac{v_b}{B}} \quad (b/s/Hz)
+\]
+
+\noindent\textbf{Ví dụ:} Cho kênh thông tin mạng 4G có băng tần [1815 - 1825] MHz. Hỏi để truyền được tốc độ binh 80 Mb/s thì số mức truyền tối thiểu là bao nhiêu?
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+Băng thông của kênh là:
+\[
+    B = f_{max} - f_{min} = 1825 -1815 = 10 \quad (MHz)
+\]
+
+Áp dụng công thức Nyquist:
+\[
+    \begin{aligned}
+        &v_{b_{max}} = 2B \cdot \log_2 (M)\\[6pt]
+        \iff &M = 2^{ \frac{v_{b_{max}}}{2B}}\\[6pt]
+        \iff &M = 2^{ \frac{80}{2 \cdot 10} } = 2^4 = 16 \quad (\text{Mức}) 
+    \end{aligned} 
+\]
+
+Vậy: $M$ = 16 (mức)

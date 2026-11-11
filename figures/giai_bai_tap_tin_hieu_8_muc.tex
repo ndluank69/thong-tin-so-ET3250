@@ -1,0 +1,52 @@
+\begin{tikzpicture}[
+    x=1.5cm,
+    y=0.43cm,
+    font=\small\bfseries\boldmath,
+    line cap=butt,
+    line join=miter
+]
+    % Vạch chia sáu khoảng ký hiệu.
+    \foreach \boundary in {0,...,6} {
+        \draw[black!55, line width=0.4pt, dashed]
+            (\boundary, -7.65) -- (\boundary, 7.65);
+    }
+
+    % Các đường tham chiếu và nhãn mức điện áp.
+    \foreach \level in {7, 5, 3, 1, -1, -3, -5, -7} {
+        \draw[black!45, line width=0.4pt, densely dotted]
+            (0, \level) -- (6, \level);
+        \draw[line width=0.6pt] (6, \level) -- (6.15, \level);
+        \node[anchor=east, inner xsep=0pt] at (6.97, \level)
+            {$\level\,\mathrm{V}$};
+    }
+    \draw[line width=0.7pt] (0, 0) -- (6.15, 0);
+
+    \node[anchor=base east, inner xsep=0pt] at (-0.3, 8.35) {$S_t=$};
+    \node[anchor=east, align=right, inner xsep=0pt] at (-0.3, 0)
+        {Tín hiệu\\8 mức};
+
+    \foreach \position/\bits in {
+        0.5/{0\,0\,0},
+        1.5/{1\,1\,1},
+        2.5/{0\,1\,0},
+        3.5/{1\,0\,1},
+        4.5/{1\,1\,0},
+        5.5/{1\,0\,0}
+    } {
+        \node[anchor=base] at (\position, 8.35) {$\bits$};
+    }
+
+    % Dạng sóng bậc thang: -7, 7, -3, 3, 5, 1 (V).
+    \draw[line width=1.6pt]
+        (0, -7) -- (1, -7)
+        -- (1, 7) -- (2, 7)
+        -- (2, -3) -- (3, -3)
+        -- (3, 3) -- (4, 3)
+        -- (4, 5) -- (5, 5)
+        -- (5, 1) -- (6, 1);
+
+    % Độ rộng một ký hiệu, từ vạch đầu đến vạch cuối của nhóm 100.
+    \draw[<->, >=stealth, line width=0.7pt]
+        (5, -2.2) -- (6, -2.2)
+        node[midway, above=1pt, inner sep=0pt, font=\scriptsize] {$t_B$};
+\end{tikzpicture}

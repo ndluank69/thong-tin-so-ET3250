@@ -1,0 +1,62 @@
+\documentclass[12pt, a4paper, oneside]{book}
+
+%===============================================
+%=================FONT CHỮ======================
+%===============================================
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+
+%===============================================
+%=================TOÁN HỌC======================
+%===============================================
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+
+%===============================================
+%=================HÌNH ẢNH======================
+%===============================================
+\usepackage{graphicx}
+
+%===============================================
+%=================TRÌNH BÀY=====================
+%===============================================
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{indentfirst}
+\usepackage{pgfplots}
+\pgfplotsset{compat = 1.18}
+% Bắt đầu đoạn mới bằng một dòng trống hoặc lệnh \par.
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{1cm}
+
+%===============================================
+%===================ĐƠN VỊ======================
+%===============================================
+\usepackage{siunitx}
+
+%===============================================
+%==============LIÊN KẾT VÀ MỤC LỤC==============
+%===============================================
+\usepackage[plainpages=false, pdfpagelabels, hypertexnames=false]{hyperref}
+
+\geometry{
+    left = 2.5cm,
+    right = 2cm,
+    top = 2cm,
+    bottom = 2cm
+}
+
+\title{Thông tin số}
+\author{Nguyễn Đức Luân}
+\date{\today}
+
+\begin{document}
+    \maketitle
+
+    \tableofcontents
+
+    \input{chapters/khai_niem_co_ban.tex}
+    \end{document}

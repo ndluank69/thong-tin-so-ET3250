@@ -1,0 +1,59 @@
+% Lời giải cho dãy bit 10 01 11 00 01.
+% Ánh xạ: 00 -> -3 V; 01 -> -1 V; 10 -> 1 V; 11 -> 3 V.
+\begin{tikzpicture}[
+    x=1.5cm,
+    y=0.6cm,
+    font=\small\bfseries\boldmath,
+    draw=black,
+    text=black,
+    line cap=butt,
+    line join=miter
+]
+    % Vạch chia năm khoảng ký hiệu, mỗi khoảng mang hai bit.
+    \foreach \boundary in {0,...,5} {
+        \draw[line width=0.4pt, dash pattern=on 3pt off 3pt]
+            (\boundary, -3.6) -- (\boundary, 3.6);
+    }
+
+    % Đường tham chiếu biên độ và các nhãn mức điện áp.
+    \foreach \level in {3, 1, -1, -3} {
+        \draw[line width=0.3pt, densely dotted]
+            (0, \level) -- (5.4, \level);
+        \node[anchor=west] at (5.65, \level) {$\level$};
+    }
+    \draw[line width=0.7pt] (0, 0) -- (5.85, 0);
+
+    \node[anchor=east] at (-0.45, 4.1) {$S_t=$};
+    \node[anchor=east, align=left] at (-0.45, 0)
+        {Tín hiệu 4\\mức};
+
+    % Đặt các cặp bit phía trên khung để không chạm mức +3 V.
+    \foreach \position/\bits in {
+        0.5/{1\,0},
+        1.5/{0\,1},
+        2.5/{1\,1},
+        3.5/{0\,0},
+        4.5/{0\,1}
+    } {
+        \node at (\position, 4.1) {$\bits$};
+    }
+
+    % Dạng sóng bậc thang: 1, -1, 3, -3, -1 (V).
+    \draw[line width=1.6pt]
+        (0, 1) -- (1, 1)
+        -- (1, -1) -- (2, -1)
+        -- (2, 3) -- (3, 3)
+        -- (3, -3) -- (4, -3)
+        -- (4, -1) -- (5, -1);
+
+    % Độ rộng thời gian dưới cặp bit 01, trong khoảng từ 1 V đến 3 V.
+    % Hai biên ký hiệu là x=4 và x=5; một bit rộng nửa khoảng này.
+    \draw[line width=0.4pt] (4.5, 2.05) -- (4.5, 2.55);
+
+    \draw[<->, >=stealth, line width=0.7pt]
+        (4, 2.3) -- (4.5, 2.3)
+        node[midway, above=1pt, inner sep=0pt, font=\scriptsize] {$t_b$};
+    \draw[<->, >=stealth, line width=0.7pt]
+        (4, 1.25) -- (5, 1.25)
+        node[midway, above=1pt, inner sep=0pt, font=\scriptsize] {$t_B$};
+\end{tikzpicture}

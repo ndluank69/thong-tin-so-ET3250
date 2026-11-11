@@ -1,0 +1,39 @@
+\begin{tikzpicture}[
+    x=1.5cm,
+    y=0.43cm,
+    font=\small\bfseries\boldmath,
+    line width=1.1pt,
+    line cap=round
+]
+    \begin{scope}[draw=black, text=black]
+        % Bảy vạch biên tạo thành sáu khoảng ký hiệu, mỗi khoảng ba bit.
+        \foreach \boundary in {0,...,6} {
+            \draw (\boundary, -7.65) -- (\boundary, 7.65);
+        }
+
+        \draw (0, 0) -- (6.15, 0);
+
+        \node[anchor=base east, inner xsep=0pt] at (-0.3, 8.35) {$S_t=$};
+        \node[anchor=east, align=right, inner xsep=0pt] at (-0.3, 0)
+            {Tín hiệu\\8 mức};
+
+        % Đặt từng nhóm ba bit ở giữa khoảng ký hiệu tương ứng.
+        \foreach \position/\bits in {
+            0.5/{0\,0\,0},
+            1.5/{1\,1\,1},
+            2.5/{0\,1\,0},
+            3.5/{1\,0\,1},
+            4.5/{1\,1\,0},
+            5.5/{1\,0\,0}
+        } {
+            \node[anchor=base] at (\position, 8.35) {$\bits$};
+        }
+
+        % Các mức điện áp theo bảng ánh xạ của bài tập.
+        \foreach \level in {7, 5, 3, 1, -1, -3, -5, -7} {
+            \draw[line width=0.6pt] (6, \level) -- (6.15, \level);
+            \node[anchor=east, inner xsep=0pt] at (6.97, \level)
+                {$\level\,\mathrm{V}$};
+        }
+    \end{scope}
+\end{tikzpicture}

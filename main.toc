@@ -1,0 +1,14 @@
+\contentsline {chapter}{\numberline {1}Các khái niệm cơ bản}{2}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Thông tin}{2}{section.3}%
+\contentsline {section}{\numberline {1.2}Tín hiệu truyền}{2}{section.4}%
+\contentsline {subsection}{\numberline {1.2.1}Analog signal}{2}{subsection.5}%
+\contentsline {subsection}{\numberline {1.2.2}Digital signal}{3}{subsection.6}%
+\contentsline {section}{\numberline {1.3}Ví dụ tín hiệu 2 mức}{3}{section.7}%
+\contentsline {section}{\numberline {1.4}Ví dụ tín hiệu 4 mức}{4}{section.8}%
+\contentsline {section}{\numberline {1.5}Ví dụ tín hiệu 8 mức}{5}{section.9}%
+\contentsline {section}{\numberline {1.6}Mối quan hệ giữa $B$, $v_b$, $v_B$, $M$, $SNR$}{6}{section.10}%
+\contentsline {subsection}{\numberline {1.6.1}Băng thông ($B$)}{6}{subsection.11}%
+\contentsline {subsection}{\numberline {1.6.2}Tốc độ truyền 1 bit ($v_b$)}{6}{subsection.12}%
+\contentsline {subsection}{\numberline {1.6.3}Tốc độ truyền 1 tín hiệu ($v_B$)}{6}{subsection.13}%
+\contentsline {subsection}{\numberline {1.6.4}Số mức ($M$)}{7}{subsection.14}%
+\contentsline {subsection}{\numberline {1.6.5}Tỉ lệ tín hiệu trên nhiễu ($SNR$)}{7}{subsection.15}%
