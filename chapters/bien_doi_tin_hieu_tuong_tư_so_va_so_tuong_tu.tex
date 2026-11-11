@@ -1,0 +1,64 @@
+\chapter{Biến đổi tín hiệu tương tự - số (ADC)}
+- Có nhiều phương pháp 
+
+$\rightarrow$ Phương pháp cơ bản nhất PCM (Pulse Code Modulation)
+
+\section{Phương pháp PCM}
+- Quá trình biến đổi gồm 3 bước:
+
+\begin{center}
+    \fbox{Lấy mẫu $\rightarrow$ Lượng tử hóa $\rightarrow$ Mã hóa}
+\end{center}
+
+\subsection{Lấy mẫu}
+\begin{center}
+    \begin{minipage}{\linewidth}
+        \centering
+        \setlength{\parskip}{0pt}
+        \offinterlineskip
+        \input{figures/tin_hieu_tuong_tu.tex}\par
+        \vspace{3pt}
+        \fbox{Tín hiệu tương tự}\par
+        \vspace{6pt}
+        \input{figures/tin_hieu_lay_mau.tex}\par
+        \vspace{3pt}
+        \fbox{Tín hiệu lấy mẫu}
+    \end{minipage}
+\end{center}
+
+\noindent Trong đó:
+
+\noindent\hspace*{0.5cm}%
+\begin{tabularx}{\dimexpr\linewidth-0.5cm\relax}{@{}l@{\enspace:\enspace}X@{}}
+    $t$ & Thời gian\\[6pt]
+    $T$ & Đơn vị khoảng thời gian dùng để đánh dấu trục 0, T, 2T,...\\[6pt]
+    $x(t)$ & Tín hiệu tương tự, có giá trị hay đổi liên tục theo thời gian\\[6pt]
+    $x_{lm}(t)$ & Tín hiệu lấy mẫu, là giá trị của $x(t)$ tại những thời điểm xác định\\[6pt]
+    $T_{lm}$ & Chu kỳ lấy mẫu, khoảng thời gian giữa hai lần lấy mẫu liên tiếp
+    \[
+        \boxed{T_{lm} = T_s = \dfrac{1}{F_s}}
+    \]\\[6pt]
+    $F_s$ & Tần số lấy mẫu, tức là số lần lấy mẫu tín hiệu trong 1 giây
+\end{tabularx}
+
+\vspace{1cm}
+- Với tín hiệu $x(t)$ có dải tần $w = [f_{min} \quad f_{max}]$
+
+\hspace*{1cm} Định lý Nyquist:
+\[
+    \begin{aligned}
+        &\boxed{
+            n = \operatorname{int}\left(\dfrac{f_{\max}}{f_{\max} - f_{\min}}\right)
+        }\\[6pt]
+        &\boxed{
+            \dfrac{2 \cdot f_{\max}}{n} \leq F_s < \dfrac{2 \cdot f_{\min}}{n - 1}
+        }
+    \end{aligned}
+\]
+
+
+
+
+
+
+

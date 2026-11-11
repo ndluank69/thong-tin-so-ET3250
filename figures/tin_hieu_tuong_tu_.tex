@@ -1,0 +1,24 @@
+% Vẽ bằng TikZ để giữ đường nét sắc khi phóng to hoặc in.
+\begin{tikzpicture}[x=0.95cm, y=0.85cm, font=\sffamily]
+    \definecolor{signalaxis}{RGB}{65, 106, 177}
+    \definecolor{signaltime}{RGB}{241, 181, 0}
+
+    % Đường tham chiếu tại đỉnh sóng.
+    \draw[gray!15, line width=0.5pt] (0, 1.5) -- (9.3, 1.5);
+
+    % Ba chu kỳ của tín hiệu liên tục.
+    \draw[black, line width=0.9pt]
+        plot[domain=0:9, samples=361, smooth]
+        (\x, {1.5*sin(120*\x)});
+
+    % Hai trục không chia vạch, giống hình mẫu.
+    \draw[signalaxis, line width=1.3pt] (0, -2.35) -- (0, 3.1);
+    \draw[signalaxis, line width=1.3pt] (0, 0) -- (10.1, 0);
+
+    \node[font=\sffamily\large] at (4.5, 2.45) {Analog Signal};
+    \node[rotate=90] at (-0.55, 0) {Amplitude};
+
+    \draw[signaltime, line width=1.1pt, ->, >=stealth]
+        (9, -0.8) -- (10.1, -0.8);
+    \node[anchor=north] at (9.55, -1.1) {Time};
+\end{tikzpicture}

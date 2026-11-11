@@ -12,3 +12,6 @@
 \contentsline {subsection}{\numberline {1.6.3}Tốc độ truyền 1 tín hiệu ($v_B$)}{6}{subsection.13}%
 \contentsline {subsection}{\numberline {1.6.4}Số mức ($M$)}{7}{subsection.14}%
 \contentsline {subsection}{\numberline {1.6.5}Tỉ lệ tín hiệu trên nhiễu ($SNR$)}{7}{subsection.15}%
+\contentsline {chapter}{\numberline {2}Biến đổi tín hiệu tương tự - số (ADC)}{8}{chapter.16}%
+\contentsline {section}{\numberline {2.1}Phương pháp PCM}{8}{section.17}%
+\contentsline {subsection}{\numberline {2.1.1}Lấy mẫu}{9}{subsection.18}%

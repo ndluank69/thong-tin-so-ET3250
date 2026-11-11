@@ -1,0 +1,51 @@
+% Tín hiệu lấy mẫu với các biên độ tương ứng hình tín hiệu tương tự.
+\begin{tikzpicture}[
+    x=1.1cm,
+    y=6cm,
+    font=\small,
+    line cap=round,
+    line join=round
+]
+    % Cùng bề rộng với hình tương tự để các mốc thời gian thẳng hàng.
+    \path (-1.8, 0) -- (9.9, 0);
+    \definecolor{sampledsignal}{RGB}{50, 150, 215}
+
+    % Đường chuẩn phía dưới và các vạch chia.
+    \draw[black!65, line width=0.45pt] (0, -0.3) -- (9, -0.3);
+    \foreach \position in {0,...,9} {
+        \draw[black!65, line width=0.45pt]
+            (\position, -0.3) -- (\position, -0.285);
+    }
+    \foreach \level in {-0.3, -0.2, -0.1, 0, 0.1, 0.2} {
+        \draw[black!65, line width=0.45pt]
+            (0, \level) -- (0.08, \level);
+    }
+
+    \draw[->, >=stealth, line width=0.8pt] (0, -0.3) -- (0, 0.29);
+    \draw[->, >=stealth, line width=0.8pt] (0, 0) -- (9.3, 0);
+    \node[anchor=east, font=\large] at (-0.35, 0.25) {$x_{\mathrm{lm}}(t)$};
+    \node[anchor=west, font=\large] at (9.4, 0.025) {$t$};
+
+    % Mốc thời gian tương ứng với hình tín hiệu tương tự.
+    \node[anchor=north] at (0, -0.32) {$0$};
+    \node[anchor=north] at (1, -0.32) {$T$};
+    \foreach \position in {2,...,9} {
+        \node[anchor=north] at (\position, -0.32) {$\position T$};
+    }
+
+    % Mỗi mẫu là một đoạn thẳng từ trục thời gian đến biên độ mẫu.
+    \foreach \position/\amplitude in {
+        0/0.11, 1/0.135, 2/0.16, 3/0.135, 4/0.045,
+        5/-0.06, 6/-0.185, 7/-0.225, 8/-0.17, 9/-0.09
+    } {
+        \draw[sampledsignal, line width=0.65pt]
+            (\position, 0) -- (\position, \amplitude);
+        \draw[sampledsignal, fill=white, line width=0.65pt]
+            (\position, \amplitude) circle[radius=2.1pt];
+    }
+
+    % Khoảng cách thời gian giữa hai mẫu liên tiếp.
+    \draw[<->, >=stealth, line width=0.8pt] (5, -0.115) -- (6, -0.115);
+    \node[anchor=north, inner sep=1pt] at (5.5, -0.215)
+        {$T_{\mathrm{}}$};
+\end{tikzpicture}
