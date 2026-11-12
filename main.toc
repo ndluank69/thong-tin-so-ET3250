@@ -15,3 +15,4 @@
 \contentsline {chapter}{\numberline {2}Biến đổi tín hiệu tương tự - số (ADC)}{8}{chapter.16}%
 \contentsline {section}{\numberline {2.1}Phương pháp PCM}{8}{section.17}%
 \contentsline {subsection}{\numberline {2.1.1}Lấy mẫu}{9}{subsection.18}%
+\contentsline {subsection}{\numberline {2.1.2}Lượng tự hóa}{10}{subsection.19}%

@@ -1,12 +1,12 @@
 # Fdb version 4
-["xdvipdfmx"] 1794381490.18573 "main.xdv" "main.pdf" "main" 1794381490.26641 0
-  "main.xdv" 1794381490.09536 141960 db9c29f47bd9a16bc2987fc552cc0c3d "xelatex"
+["xdvipdfmx"] 1794470168.63822 "main.xdv" "main.pdf" "main" 1794470168.67711 0
+  "main.xdv" 1794470168.59386 154232 93c1e08e5f3c6b989d841f55360e70fe "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1794381488.27383 "/home/luan/Desktop/LaTex/Thông tin số/main.tex" "main.xdv" "main" 1794381490.26326 0
+["xelatex"] 1794470167.66644 "/home/luan/Desktop/LaTex/thong-tin-so-ET3250/main.tex" "main.xdv" "main" 1794470168.67545 0
   "/etc/texmf/web2c/texmf.cnf" 1793758346.90459 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/luan/Desktop/LaTex/Thông tin số/main.tex" 1794380306.09422 1837 3ba9190a0cbbafa007d4c7dc8f52ce43 ""
+  "/home/luan/Desktop/LaTex/thong-tin-so-ET3250/main.tex" 1794442791.14259 1837 3ba9190a0cbbafa007d4c7dc8f52ce43 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -216,19 +216,19 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1769369718 41603 27f93b3067076450172040dcd57ca8b3 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1769369718 41603 27f93b3067076450172040dcd57ca8b3 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1793798592 4456295 f602d9c76c80aa3564c6a6a74a9d610c ""
-  "chapters/bien_doi_tin_hieu_tuong_tư_so_va_so_tuong_tu.tex" 1794381487.99097 1933 804b8224e5e3629b2b2f4d818c5e7327 ""
-  "chapters/khai_niem_co_ban.tex" 1794378453.40658 6710 75f49d0d7d64b19a90d3e2fb0ed6ad16 ""
-  "figures/bai_tap_tin_hieu_4_muc.tex" 1794275494.03421 1262 8ec859c3429bf7f1789b1ebac4f01002 ""
-  "figures/bai_tap_tin_hieu_8_muc.tex" 1794358739.94336 1302 dd62b035bf96aaa592e4f454ecffcfdf ""
-  "figures/giai_bai_tap_tin_hieu_4_muc.tex" 1794276279.45223 1979 d2836e9791df504bcda755c68c78050f ""
-  "figures/giai_bai_tap_tin_hieu_8_muc.tex" 1794359234.91385 1676 97ebb19d038a6ca6324d694d88124dc0 ""
-  "figures/tin_hieu_lay_mau.tex" 1794380175.33547 2047 ce3b516c8f73c7b184c9082707242185 ""
-  "figures/tin_hieu_so.tex" 1794237777.20328 1382 78b817b437b1f093c95934315d594096 ""
-  "figures/tin_hieu_tuong_tu.tex" 1794379077.70622 1660 e58c1c04ec9e187b7e5db5181c23158b ""
-  "main.aux" 1794381490.09456 2509 c9503b29ae5508d84e672af6fad789a0 "xelatex"
-  "main.out" 1794381490.09536 2985 6a498c29b581e359401fbb66a56d1d95 "xelatex"
-  "main.tex" 1794380306.09422 1837 3ba9190a0cbbafa007d4c7dc8f52ce43 ""
-  "main.toc" 1794381490.09536 1508 afbbf576a37bc40698f2a0f30a620fcc "xelatex"
+  "chapters/bien_doi_tin_hieu_tuong_tư_so_va_so_tuong_tu.tex" 1794470167.56996 4085 670c5c3d8e639a513675c9cf84940b2e ""
+  "chapters/khai_niem_co_ban.tex" 1794403338.9245 6710 75f49d0d7d64b19a90d3e2fb0ed6ad16 ""
+  "figures/bai_tap_tin_hieu_4_muc.tex" 1794403338.9245 1262 8ec859c3429bf7f1789b1ebac4f01002 ""
+  "figures/bai_tap_tin_hieu_8_muc.tex" 1794403338.92463 1302 dd62b035bf96aaa592e4f454ecffcfdf ""
+  "figures/giai_bai_tap_tin_hieu_4_muc.tex" 1794403338.92463 1979 d2836e9791df504bcda755c68c78050f ""
+  "figures/giai_bai_tap_tin_hieu_8_muc.tex" 1794403338.92463 1676 97ebb19d038a6ca6324d694d88124dc0 ""
+  "figures/tin_hieu_lay_mau.tex" 1794403338.92463 2047 ce3b516c8f73c7b184c9082707242185 ""
+  "figures/tin_hieu_so.tex" 1794403338.92463 1382 78b817b437b1f093c95934315d594096 ""
+  "figures/tin_hieu_tuong_tu.tex" 1794403338.92463 1660 e58c1c04ec9e187b7e5db5181c23158b ""
+  "main.aux" 1794470168.59148 2636 3e5b67b5906858ca93005f7f570c7f5d "xelatex"
+  "main.out" 1794470168.59248 3121 51aa8b3f84ad89e1c7aa9b1358ec0b04 "xelatex"
+  "main.tex" 1794442791.14259 1837 3ba9190a0cbbafa007d4c7dc8f52ce43 ""
+  "main.toc" 1794470168.59386 1594 4d0d896349c97904d505093d271c27d3 "xelatex"
   (generated)
   "main.aux"
   "main.log"

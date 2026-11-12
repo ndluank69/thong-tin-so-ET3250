@@ -1,9 +1,9 @@
-PWD /home/luan/Desktop/LaTex/Thông tin số
+PWD /home/luan/Desktop/LaTex/thong-tin-so-ET3250
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/xetex/xelatex.fmt
-INPUT /home/luan/Desktop/LaTex/Thông tin số/main.tex
+INPUT /home/luan/Desktop/LaTex/thong-tin-so-ET3250/main.tex
 OUTPUT main.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/book.cls

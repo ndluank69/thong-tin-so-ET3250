@@ -56,7 +56,80 @@ $\rightarrow$ Phương pháp cơ bản nhất PCM (Pulse Code Modulation)
     \end{aligned}
 \]
 
+\newpage
 
+Ngoài ra, ta có
+
+\fbox{%
+    \parbox{\dimexpr\linewidth-40\fboxsep-2\fboxrule\relax}{%
+        $B = f_{\max} - f_{\min}$\\[6pt]
+        $\rightarrow$ Cách kiểm tra xem tính $F_s$ đúng hay không là: $F_s \geq 2B$
+    }%
+}
+
+\noindent\textbf{Ví dụ:} Cho tín hiệu có dải tần [60 - 120] KHz. Tính $F_s$ bé nhất có thể.
+
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+Ta có: 
+
+\hspace*{1cm} $\iff n = \operatorname{int}\left(\dfrac{f_{\max}}{f_{\max} - f_{\min}}\right)$
+
+\hspace*{1cm} $\iff n = \operatorname{int}\left(\dfrac{120}{120 - 60}\right) = 2$
+
+Suy ra,
+
+\hspace*{2cm} $\dfrac{2 \cdot f_{max}}{n} \leq F_s < \dfrac{2 \cdot f_{min}}{n - 1}$
+
+\hspace*{1cm} $\iff \dfrac{2 \cdot 120}{2} \leq F_s < \dfrac{2 \cdot 60}{2 - 1}$
+
+\hspace*{1cm} $\iff 120 \leq F_s < 120$ (KHz)\\[6pt]
+
+Vậy: $F_s$ bé nhất có thể là: $F_{s_{min}} = 120$ (KHz)
+
+\vspace{0.5cm}
+
+\noindent\textbf{Chú ý:} Nếu $n = 1$ thì $F_s \geq 2 \cdot f_{max}$
+
+\noindent Công thức thường hay dùng $F_s \geq 2\cdot f_{max}$ có thể dùng được trong mọi trường hợp nhưng không phải tối ưu. Trong trường hợp yêu cầu tính $F_s$ bé nhất thì cần tính theo công thức trên.
+
+\subsection{Lượng tự hóa}
+
+Ta có: Các bước thực hiện \textcolor{red}{lượng tự hóa tuyến tính}
+
+\hspace*{0.5cm}+ $x(t)$: Biên độ xung, biên độ tối đa là: $[-X_{min} \quad X_{max}]$
+
+\hspace*{0.5cm}+ Số nhiễu mức tối đa: $\dfrac{-N_{max}}{2}$ hoặc $\dfrac{N_{max}}{2}$
+
+\hspace*{0.5cm}+ Biên độ 1 mức:
+\[
+    \boxed{
+        \Delta x = \dfrac{X_{max} - x_{min}}{N_{max}}
+    }
+\]
+
+\hspace*{0.5cm}+ Số mức cho 1 xung:
+\[
+    \boxed{
+        N = round\left(\dfrac{x(t)}{\Delta x}\right)
+    }
+\]
+
+\hspace*{0.5cm}+ Sai số lượng tử hóa: 
+\[
+    \boxed{
+        \Delta x^* = |N \cdot \Delta x - x(t)|
+    }
+\]
+
+\hspace*{0.5cm}+ Tỉ lệ tín hiệu trên nhiễu lượng tử hóa: 
+\[
+    \boxed{
+        SNqR = \dfrac{\sum x_i(t)}{\sum \Delta x^*} = \dfrac{\text{trung bình bình phương tín hiệu}}{\text{trung bình bình phương sai số LTH}}
+    }
+\]
 
 
 

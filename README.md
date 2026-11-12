@@ -24,6 +24,12 @@ Cấu hình theo
 
 ## Xem trên máy
 
+Nếu dùng VS Code với tiện ích LaTeX Workshop, mở thư mục dự án bằng **Open Folder**.
+Cấu hình trong `.vscode/settings.json` sẽ biên dịch bằng XeLaTeX mỗi khi lưu tệp
+`.tex`. Mở bản xem PDF bằng **LaTeX Workshop: View LaTeX PDF file** để bản xem
+cập nhật sau khi biên dịch thành công. Nếu VS Code chưa nhận cấu hình mới, chạy
+**Developer: Reload Window** một lần.
+
 Cài XeLaTeX, `latexmk` và phông DejaVu Serif, sau đó chạy từ thư mục dự án.
 
 ```sh

@@ -1,0 +1,53 @@
+% Đặc tuyến lượng tử hóa tuyến tính và sai số lượng tử hóa.
+\begin{tikzpicture}[
+    x=1.45cm,
+    y=1.25cm,
+    font=\large,
+    line cap=round,
+    line join=round
+]
+    \definecolor{linearquantization}{RGB}{245, 27, 45}
+
+    % Nhãn ở góc trên bên trái trong ảnh tham chiếu.
+    \node[anchor=west, inner sep=0pt, text=black]
+        at (-4.60, 3.82) {$-1$};
+
+    \begin{scope}[draw=linearquantization, text=linearquantization]
+        % Hai trục tọa độ, không có đầu mũi tên.
+        \draw[line width=1.2pt] (-4.45, 0) -- (2.90, 0);
+        \draw[line width=1.2pt] (0, -0.50) -- (0, 3.90);
+
+        % Đặc tuyến bậc thang với các bước lượng tử bằng nhau.
+        \draw[line width=1.5pt]
+            (-2.75, 0) -- (-2.75, 1) -- (-1.75, 1)
+            -- (-1.75, 2) -- (-0.75, 2)
+            -- (-0.75, 3) -- (0.25, 3)
+            -- (0.25, 4) -- (1.30, 4);
+
+        % Độ cao một mức lượng tử.
+        \draw[<->, >=stealth, line width=1.05pt]
+            (-1.80, 0.025) -- (-1.80, 0.975);
+        \node[anchor=west, inner sep=0pt]
+            at (-1.48, 0.48) {$\Delta x$};
+
+        % Giá trị đầu vào nằm giữa hai mức và sai lệch so với mức dưới.
+        \draw[fill=white, line width=0.9pt]
+            (0, 3.35) circle[radius=2.4pt];
+        \draw[line width=0.8pt] (-0.13, 3.35) -- (0.13, 3.35);
+        \draw[line width=0.8pt] (0.38, 3.35) -- (0.65, 3.35);
+        \draw[line width=0.8pt] (0.38, 3.00) -- (0.65, 3.00);
+        \draw[<->, >=stealth, line width=0.6pt]
+            (0.49, 3.025) -- (0.49, 3.325);
+        \node[anchor=west, inner sep=0pt]
+            at (0.73, 3.16) {$\delta x$};
+
+        % Mũi tên dẫn tới chú thích sai số lượng tử hóa.
+        \draw[->, >=stealth, line width=0.95pt]
+            (0.89, 2.98) .. controls (1.05, 2.80) and (1.13, 2.52)
+            .. (1.16, 2.30);
+        \node[anchor=west, align=left, inner sep=0pt, font=\large\bfseries]
+            at (0.30, 1.79) {Sai số lượng\\tử hóa};
+        \node[inner sep=0pt, font=\Large]
+            at (1.42, 0.74) {$\leq \dfrac{\Delta x}{2}$};
+    \end{scope}
+\end{tikzpicture}
