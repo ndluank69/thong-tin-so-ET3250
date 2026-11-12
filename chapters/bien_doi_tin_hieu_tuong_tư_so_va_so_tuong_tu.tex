@@ -1,5 +1,5 @@
 \chapter{Biến đổi tín hiệu tương tự - số (ADC)}
-- Có nhiều phương pháp 
+- Có nhiều phương pháp
 
 $\rightarrow$ Phương pháp cơ bản nhất PCM (Pulse Code Modulation)
 
@@ -12,36 +12,52 @@ $\rightarrow$ Phương pháp cơ bản nhất PCM (Pulse Code Modulation)
 
 \subsection{Lấy mẫu}
 \begin{center}
-    \begin{minipage}{\linewidth}
+    \begin{minipage}[b]{0.49\linewidth}
         \centering
         \setlength{\parskip}{0pt}
         \offinterlineskip
-        \input{figures/tin_hieu_tuong_tu.tex}\par
+        \resizebox{\linewidth}{!}{\input{figures/tin_hieu_tuong_tu.tex}}\par
         \vspace{3pt}
-        \fbox{Tín hiệu tương tự}\par
-        \vspace{6pt}
-        \input{figures/tin_hieu_lay_mau.tex}\par
+        \fbox{Tín hiệu tương tự}
+    \end{minipage}\hfill%
+    \begin{minipage}[b]{0.49\linewidth}
+        \centering
+        \setlength{\parskip}{0pt}
+        \offinterlineskip
+        \resizebox{\linewidth}{!}{\input{figures/tin_hieu_lay_mau.tex}}\par
         \vspace{3pt}
         \fbox{Tín hiệu lấy mẫu}
     \end{minipage}
 \end{center}
 
-\noindent Trong đó:
+\noindent Trong đó:\nopagebreak
 
-\noindent\hspace*{0.5cm}%
-\begin{tabularx}{\dimexpr\linewidth-0.5cm\relax}{@{}l@{\enspace:\enspace}X@{}}
-    $t$ & Thời gian\\[6pt]
-    $T$ & Đơn vị khoảng thời gian dùng để đánh dấu trục 0, T, 2T,...\\[6pt]
-    $x(t)$ & Tín hiệu tương tự, có giá trị hay đổi liên tục theo thời gian\\[6pt]
-    $x_{lm}(t)$ & Tín hiệu lấy mẫu, là giá trị của $x(t)$ tại những thời điểm xác định\\[6pt]
-    $T_{lm}$ & Chu kỳ lấy mẫu, khoảng thời gian giữa hai lần lấy mẫu liên tiếp
+% Danh sách cho phép ngắt trang giữa các mục, tránh khoảng trống do bảng.
+\begin{list}{}{%
+    \setlength{\leftmargin}{2.1cm}%
+    \setlength{\labelwidth}{1.35cm}%
+    \setlength{\labelsep}{0.25cm}%
+    \setlength{\itemsep}{2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{3pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\abovedisplayskip}{4pt}%
+    \setlength{\belowdisplayskip}{4pt}%
+    \setlength{\abovedisplayshortskip}{0pt}%
+    \setlength{\belowdisplayshortskip}{4pt}%
+    \renewcommand{\makelabel}[1]{\makebox[\labelwidth][l]{#1\hfill:}}%
+}
+    \item[$t$] Thời gian
+    \item[$T$] Đơn vị khoảng thời gian dùng để đánh dấu trục 0, T, 2T,...
+    \item[$x(t)$] Tín hiệu tương tự, có giá trị hay đổi liên tục theo thời gian
+    \item[$x_{lm}(t)$] Tín hiệu lấy mẫu, là giá trị của $x(t)$ tại những thời điểm xác định
+    \item[$T_{lm}$] Chu kỳ lấy mẫu, khoảng thời gian giữa hai lần lấy mẫu liên tiếp
     \[
         \boxed{T_{lm} = T_s = \dfrac{1}{F_s}}
-    \]\\[6pt]
-    $F_s$ & Tần số lấy mẫu, tức là số lần lấy mẫu tín hiệu trong 1 giây
-\end{tabularx}
+    \]
+    \item[$F_s$] Tần số lấy mẫu, tức là số lần lấy mẫu tín hiệu trong 1 giây
+\end{list}
 
-\vspace{1cm}
 - Với tín hiệu $x(t)$ có dải tần $w = [f_{min} \quad f_{max}]$
 
 \hspace*{1cm} Định lý Nyquist:
@@ -55,8 +71,6 @@ $\rightarrow$ Phương pháp cơ bản nhất PCM (Pulse Code Modulation)
         }
     \end{aligned}
 \]
-
-\newpage
 
 Ngoài ra, ta có
 
@@ -73,7 +87,7 @@ Ngoài ra, ta có
     \textbf{Giải}
 \end{center}
 
-Ta có: 
+Ta có:
 
 \hspace*{1cm} $\iff n = \operatorname{int}\left(\dfrac{f_{\max}}{f_{\max} - f_{\min}}\right)$
 
@@ -85,11 +99,9 @@ Suy ra,
 
 \hspace*{1cm} $\iff \dfrac{2 \cdot 120}{2} \leq F_s < \dfrac{2 \cdot 60}{2 - 1}$
 
-\hspace*{1cm} $\iff 120 \leq F_s < 120$ (KHz)\\[6pt]
+\hspace*{1cm} $\iff 120 \leq F_s < 120$ (KHz)
 
 Vậy: $F_s$ bé nhất có thể là: $F_{s_{min}} = 120$ (KHz)
-
-\vspace{0.5cm}
 
 \noindent\textbf{Chú ý:} Nếu $n = 1$ thì $F_s \geq 2 \cdot f_{max}$
 
@@ -117,21 +129,16 @@ Ta có: Các bước thực hiện \textcolor{red}{lượng tự hóa tuyến t�
     }
 \]
 
-\hspace*{0.5cm}+ Sai số lượng tử hóa: 
+\hspace*{0.5cm}+ Sai số lượng tử hóa:
 \[
     \boxed{
         \Delta x^* = |N \cdot \Delta x - x(t)|
     }
 \]
 
-\hspace*{0.5cm}+ Tỉ lệ tín hiệu trên nhiễu lượng tử hóa: 
+\hspace*{0.5cm}+ Tỉ lệ tín hiệu trên nhiễu lượng tử hóa:
 \[
     \boxed{
         SNqR = \dfrac{\sum x_i(t)}{\sum \Delta x^*} = \dfrac{\text{trung bình bình phương tín hiệu}}{\text{trung bình bình phương sai số LTH}}
     }
 \]
-
-
-
-
-

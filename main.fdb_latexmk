@@ -1,12 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1794470168.63822 "main.xdv" "main.pdf" "main" 1794470168.67711 0
-  "main.xdv" 1794470168.59386 154232 93c1e08e5f3c6b989d841f55360e70fe "xelatex"
+["xdvipdfmx"] 1794493097.1987 "main.xdv" "main.pdf" "main" 1794493097.2553 0
+  "main.xdv" 1794493097.1148 153636 7c5021f94dc6ee76b06972df20db1a0b "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1794470167.66644 "/home/luan/Desktop/LaTex/thong-tin-so-ET3250/main.tex" "main.xdv" "main" 1794470168.67545 0
+["xelatex"] 1794493095.91325 "main.tex" "main.xdv" "main" 1794493097.25321 0
   "/etc/texmf/web2c/texmf.cnf" 1793758346.90459 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/luan/Desktop/LaTex/thong-tin-so-ET3250/main.tex" 1794442791.14259 1837 3ba9190a0cbbafa007d4c7dc8f52ce43 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -216,7 +215,7 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1769369718 41603 27f93b3067076450172040dcd57ca8b3 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1769369718 41603 27f93b3067076450172040dcd57ca8b3 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1793798592 4456295 f602d9c76c80aa3564c6a6a74a9d610c ""
-  "chapters/bien_doi_tin_hieu_tuong_tư_so_va_so_tuong_tu.tex" 1794470167.56996 4085 670c5c3d8e639a513675c9cf84940b2e ""
+  "chapters/bien_doi_tin_hieu_tuong_tư_so_va_so_tuong_tu.tex" 1794493095.79238 4691 e83c1aec21d6ced463df7bee77c15557 ""
   "chapters/khai_niem_co_ban.tex" 1794403338.9245 6710 75f49d0d7d64b19a90d3e2fb0ed6ad16 ""
   "figures/bai_tap_tin_hieu_4_muc.tex" 1794403338.9245 1262 8ec859c3429bf7f1789b1ebac4f01002 ""
   "figures/bai_tap_tin_hieu_8_muc.tex" 1794403338.92463 1302 dd62b035bf96aaa592e4f454ecffcfdf ""
@@ -225,10 +224,10 @@
   "figures/tin_hieu_lay_mau.tex" 1794403338.92463 2047 ce3b516c8f73c7b184c9082707242185 ""
   "figures/tin_hieu_so.tex" 1794403338.92463 1382 78b817b437b1f093c95934315d594096 ""
   "figures/tin_hieu_tuong_tu.tex" 1794403338.92463 1660 e58c1c04ec9e187b7e5db5181c23158b ""
-  "main.aux" 1794470168.59148 2636 3e5b67b5906858ca93005f7f570c7f5d "xelatex"
-  "main.out" 1794470168.59248 3121 51aa8b3f84ad89e1c7aa9b1358ec0b04 "xelatex"
+  "main.aux" 1794493097.11238 2635 61af8e490a1f0dfe2a0dfa431c4e0994 "xelatex"
+  "main.out" 1794493097.11338 3121 51aa8b3f84ad89e1c7aa9b1358ec0b04 "xelatex"
   "main.tex" 1794442791.14259 1837 3ba9190a0cbbafa007d4c7dc8f52ce43 ""
-  "main.toc" 1794470168.59386 1594 4d0d896349c97904d505093d271c27d3 "xelatex"
+  "main.toc" 1794493097.11338 1593 cf94abff63a05d6e18048a664597bbef "xelatex"
   (generated)
   "main.aux"
   "main.log"
