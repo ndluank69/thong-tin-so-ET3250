@@ -6,13 +6,7 @@
     line cap=round,
     line join=round
 ]
-    \definecolor{linearquantization}{RGB}{245, 27, 45}
-
-    % Nhãn ở góc trên bên trái trong ảnh tham chiếu.
-    \node[anchor=west, inner sep=0pt, text=black]
-        at (-4.60, 3.82) {$-1$};
-
-    \begin{scope}[draw=linearquantization, text=linearquantization]
+    \begin{scope}[draw=black, text=black]
         % Hai trục tọa độ, không có đầu mũi tên.
         \draw[line width=1.2pt] (-4.45, 0) -- (2.90, 0);
         \draw[line width=1.2pt] (0, -0.50) -- (0, 3.90);
@@ -45,9 +39,9 @@
         \draw[->, >=stealth, line width=0.95pt]
             (0.89, 2.98) .. controls (1.05, 2.80) and (1.13, 2.52)
             .. (1.16, 2.30);
-        \node[anchor=west, align=left, inner sep=0pt, font=\large\bfseries]
-            at (0.30, 1.79) {Sai số lượng\\tử hóa};
-        \node[inner sep=0pt, font=\Large]
-            at (1.42, 0.74) {$\leq \dfrac{\Delta x}{2}$};
+        % Căn giữa chú thích và công thức trong cùng một khối.
+        \node[anchor=north, align=center, inner sep=0pt, font=\large\bfseries]
+            at (2.30, 2.15) {Sai số lượng tử hóa\\[6pt]
+                {\normalfont\Large $\leq \dfrac{\Delta x}{2}$}};
     \end{scope}
 \end{tikzpicture}

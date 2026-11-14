@@ -103,11 +103,17 @@ Suy ra,
 
 Vậy: $F_s$ bé nhất có thể là: $F_{s_{min}} = 120$ (KHz)
 
+\vspace{1cm}
+
 \noindent\textbf{Chú ý:} Nếu $n = 1$ thì $F_s \geq 2 \cdot f_{max}$
 
 \noindent Công thức thường hay dùng $F_s \geq 2\cdot f_{max}$ có thể dùng được trong mọi trường hợp nhưng không phải tối ưu. Trong trường hợp yêu cầu tính $F_s$ bé nhất thì cần tính theo công thức trên.
 
 \subsection{Lượng tự hóa}
+
+\begin{center}
+    \input{figures/luong_tu_hoa_tuyen_tinh.tex}
+\end{center}
 
 Ta có: Các bước thực hiện \textcolor{red}{lượng tự hóa tuyến tính}
 
@@ -132,13 +138,92 @@ Ta có: Các bước thực hiện \textcolor{red}{lượng tự hóa tuyến t�
 \hspace*{0.5cm}+ Sai số lượng tử hóa:
 \[
     \boxed{
-        \Delta x^* = |N \cdot \Delta x - x(t)|
+        \delta x(t) = |N \cdot \Delta x - x(t)|
     }
 \]
 
 \hspace*{0.5cm}+ Tỉ lệ tín hiệu trên nhiễu lượng tử hóa:
 \[
     \boxed{
-        SNqR = \dfrac{\sum x_i(t)}{\sum \Delta x^*} = \dfrac{\text{trung bình bình phương tín hiệu}}{\text{trung bình bình phương sai số LTH}}
+        SNqR = \dfrac{\sum [x_i(t)]^2}{\sum [\delta x(t)]^2} = \dfrac{\text{trung bình bình phương tín hiệu}}{\text{trung bình bình phương sai số LTH}}
     }
+\]
+
+\hspace*{0.5cm}Nếu tính theo dB:
+\[
+    \boxed{
+        SNqR = 10 \cdot \log \left(\dfrac{\text{S}}{\text{N}}\right)
+    }
+    \quad (dB)
+\]
+
+\hspace*{1cm}Trong đó:
+
+\hspace*{3cm}$S = \sum [x_i(t)]^2$
+
+\hspace*{3cm}$N = \sum [\delta x(t)]^2$
+
+\subsection{Mã hóa}
+
+\textbf{- Định nghĩa:} $\boxed{N_{max} = 2^n} \quad \rightarrow \quad$ Biến đổi các xung thành từ mã nhị phân n bit. 
+
+- Tốc độ bit khi mã hóa là:
+\[
+    \boxed{
+        v_b = n \cdot F_s
+    }
+\]
+
+\vspace{1cm}
+
+\noindent\textbf{Ví dụ:} Mã hóa các xung thành các từ mã nhị phân 4 bit biết bit đầu tiên là bit dấu - tín hiệu dương là bit 0, tín hiệu âm là bit 1
+
+Biết $N_{max} = 16$; $\quad X_{max} = -X_{min} = 1$  
+
+Tính SNqR?
+
+\begin{center}
+    \input{figures/bai_tap_luong_tu_hoa.tex}
+\end{center}
+
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+Ta có biên độ của 1 mức là:
+\[
+    \Delta x = \dfrac{X_{max} - X_{min}}{N_{max}} = \dfrac{1-(-1)}{16} = \dfrac{2}{16} = \dfrac{1}{8} 
+\]
+
+Suy ra: $\Delta x = \dfrac{1}{8}$
+
+Biên độ của các xung là: 
+
+\[
+    \begin{aligned}
+        &N_1 = round\left(\dfrac{x_1}{\Delta x}\right) = 3\\[6pt]
+        &N_2 = round\left(\dfrac{x_2}{\Delta x}\right) = 1\\[6pt]
+        &N_3 = round\left(\dfrac{x_3}{\Delta x}\right) = -1
+    \end{aligned}
+\]
+
+Mã hóa: $3 \rightarrow 0011 \quad 1 \rightarrow 0001 \quad -1 \rightarrow 1001$
+
+Ta có, sai số lượng tử hóa là:
+\[
+    \begin{aligned}
+        &\delta x_1 = |N_1 \cdot \Delta x - x_1| = \left|3  \cdot \dfrac{1}{8} - 0.3521\right| = 0.0229 \\[6pt]
+        &\delta x_2 = |N_2 \cdot \Delta x - x_2| = \left|1  \cdot \dfrac{1}{8} - 0.186\right| = 0.061 \\[6pt]
+        &\delta x_3 = |N_3 \cdot \Delta x - x_3| = \left|-1  \cdot \dfrac{1}{8} - (-0.1)\right| = 0.025
+    \end{aligned}
+\]
+
+Vậy:
+\[
+    \begin{aligned}
+        SNqR &= 10 \cdot \log \left(\dfrac{\text{S}}{\text{N}}\right)\\[6pt]
+             &= 10 \cdot \log \left(\dfrac{(x_1)^2 + (x_2)^2 + (x_3)^2}{(\delta x_1)^2 + (\delta x_2)^2 + (\delta x_3)^2}\right)\\[6pt]
+             &= 10 \cdot \log \left(\dfrac{(0.3521)^2 + (0.186)^2 + (-0.1)^2}{(0.0229)^2 + (0.061)^2 + (0.025)^2}\right)\\[6pt]
+             &= 15.39 \quad (dB)
+    \end{aligned}
 \]
