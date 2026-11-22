@@ -290,3 +290,217 @@ Biên độ của xung là:
 \]
 
 Vì tín hiệu dương $\rightarrow$ bit đầu tiên là: \textcolor{red}{0} 1000001
+
+\vspace{0.5cm}
+
+\noindent\textbf{Chú ý:} Trong trường hợp rất rất nhiều mẫu thì tính theo công thức
+\[
+    \boxed{SNqR = \dfrac{12 \bar{x}^2}{\overline{\Delta x}^2}}
+\]
+
+\vspace{1cm}
+
+\noindent\textbf{Nhận xét:} Đặc điểm của phương pháp LTH tuyến tính:
+\[
+    \Delta x = Const
+\]
+
+$\rightarrow$ SNqR (chất lượng của tín hiệu) phụ thuộc vào x
+
+\vspace{0.5cm}
+
+\noindent\begin{tabular}[t]{@{}l@{\ }l@{\ $\rightarrow$\ }l@{}}
+    \textbf{Ví dụ:} Trong điện thoại, & nói to: x lớn  & SNqR lớn: Nghe tốt. \\
+                                     & Nói nhỏ: x nhỏ & SNqR bé: Nghe kém
+\end{tabular}
+
+$\rightarrow$ Chất lượng tín hiệu không đồng đều với mức âm thanh khác nhau
+
+
+Vì vậy, ta cần một phương pháp khác $\rightarrow$ Phương pháp lượng tử hóa phi tuyến tính.
+
+\section{Phương pháp lượng tử hóa phi tuyến}
+
+- Nhằm đảm bảo chất lượng âm thanh đồng đều nghĩa là làm sao cho:
+\[
+    SNqR = Const
+\]
+
+Nghĩa là:
+
+\[
+    \begin{aligned}
+        &\dfrac{12x^2}{\Delta X^2} = Const\\[6pt]
+        \iff &\Delta x = kx; \quad \quad k = Const
+    \end{aligned}
+\]
+
+Vậy, phương pháp này sẽ làm thay đổi $\Delta x$ tùy thuộc giá trị của X
+
+\subsection{Chứng minh SNqR = Const}
+- Công suất nhiễu lượng tử tại biên độ $x$:
+\[
+    \delta_x \approx \dfrac{\Delta_x^2}{12} = \dfrac{k^2 x^2}{12}
+\]
+
+- Lấy trung bình trên tín hiệu:
+\[
+    \overline{\delta_x} \approx \dfrac{k^2}{12} \bar{x}
+\]
+
+- Do đó:
+\[
+    SNqR = \dfrac{S}{N} = \dfrac{\bar{x}^2}{\frac{k^2}{12} \cdot \bar{x}^2}
+\]
+
+- Rút gọn:
+\[
+    SNqR = \dfrac{12}{k^2}
+\]
+
+\hspace*{1cm}Mà: $k = Const$
+
+Suy ra, 
+\[
+    \boxed{SNqR = \dfrac{12}{k^2} = const}
+\]
+
+- Trong đơn vị dB:
+\[
+    \boxed{SNqR(dB) \approx 10 \log \left(\dfrac{12}{k^2}\right)}
+\]
+
+\subsection{So sánh lượng tử hóa tuyến tính và lượng tử hóa phi tuyến}
+
+\begin{center}
+    \input{figures/so_sanh_tuyen_tinh_va_phi_tuyen.tex}
+\end{center}
+
+\begingroup
+    \renewcommand{\arraystretch}{1.4}
+    \noindent
+    \begin{tabularx}{\linewidth}{@{}
+        >{\raggedright\arraybackslash}p{0.37\linewidth}
+        >{\raggedright\arraybackslash}p{0.23\linewidth}
+        >{\raggedright\arraybackslash}X@{}}
+        \textbf{Đặc điểm} & \textbf{Tuyến tính} & \textbf{Phi tuyến logarit} \\
+        \hline
+        Bước lượng tử & $\Delta = \mathrm{const}$ & $\Delta \propto |x|$ \\
+        \hline
+        Công suất nhiễu & $P_q \approx \mathrm{const}$ & $P_q \propto P_x$ \\
+        \hline
+        SNqR khi biên độ tăng & Tăng & Gần như không đổi \\
+    \end{tabularx}
+    \par
+\endgroup
+
+\subsection{Lượng tử hóa phi tuyến theo luật A}
+
+\input{figures/luong_tu_hoa_phi_tuyen_theo_luat_A.tex}
+\begin{center}
+    F(x) = 
+    $
+        \left\{
+            \begin{aligned}
+            &\dfrac{1 + \ln(A|x|)}{1 + \ln A}; \quad &&\dfrac{1}{A} < |x| < &&1\\[6pt]
+            &\dfrac{A|x|}{1 + \ln A}; \quad &&0 < |x| < &&\dfrac{1}{A}
+            \end{aligned}
+        \right.
+    $
+\end{center}
+
+Với A = 87.6
+
+\newpage
+
+\noindent\textbf{Ví dụ:} Mã hóa tín hiệu sau và tính SNqR.
+\begin{center}
+    \input{figures/bai_tap_luong_tu_hoa_phi_tuyen_1.tex}
+\end{center}
+
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+Ta có:
+\[
+    \begin{aligned}
+        \dfrac{1}{A} < |x| < 1\\[6pt]
+    \end{aligned}
+\]
+
+Vậy, ta sử dụng công thức:
+\[
+    F(x) = \dfrac{1 + \ln(A|x|)}{1 + \ln A}
+\]
+
+Do đó:
+\[
+    \begin{aligned}
+        y &= F(x)\\[6pt]
+          &= \dfrac{1 + \ln(A|x|)}{1 + \ln A}\\[6pt]
+          &= \dfrac{1 + \ln(87.6 * 0.115784)}{1 + \ln(87.6)}\\[6pt]
+          &= 0.606045
+    \end{aligned}
+\]
+
+Sau đó, ta thực hiện lượng tử hóa tuyến tính:
+\[
+    \begin{aligned}
+        N &= round\left(\dfrac{y}{\Delta_y}\right)\\[6pt]
+          &= round\left(\dfrac{0.606045}{1/128}\right)\\[6pt]
+          &= 78
+    \end{aligned}
+\]
+
+Vì tín hiệu dương $\rightarrow$ bit đầu tiên là: \textcolor{red}{0} 1001110
+
+\newpage
+
+\noindent\textbf{Ví dụ:} Mã hóa tín hiệu sau và tính SNqR.
+\begin{center}
+    \input{figures/bai_tap_luong_tu_hoa_phi_tuyen_2.tex}
+\end{center}
+
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+Ta có:
+\[
+    0 < |x| = 0.00704956 < \dfrac{1}{A} \approx 0.01141553
+\]
+
+Vậy, ta sử dụng nhánh tuyến tính của hàm nén:
+\[
+    \begin{aligned}
+        y &= F(x) = \dfrac{A|x|}{1 + \ln A}\\[6pt]
+          &= \dfrac{87.6 \cdot 0.00704956}{1 + \ln(87.6)}\\[6pt]
+          &\approx 0.11283869
+    \end{aligned}
+\]
+
+Sau đó, ta thực hiện lượng tử hóa tuyến tính:
+\[
+    \begin{aligned}
+        N &= \operatorname{round}\left(\dfrac{y}{\Delta_y}\right)\\[6pt]
+          &= \operatorname{round}\left(\dfrac{0.11283869}{1/128}\right) = 14
+    \end{aligned}
+\]
+
+Vì tín hiệu âm, bit dấu là \textcolor{red}{1}. Mức $14$ được biểu diễn bằng 7 bit là \texttt{0001110}, nên từ mã 8 bit là \texttt{\textcolor{red}{1}0001110}.
+
+Để tính SNqR, ta khôi phục biên độ từ mức lượng tử và bit dấu:
+\[
+    \begin{aligned}
+        \hat{y} &= N\Delta_y = \dfrac{14}{128} = 0.109375\\[6pt]
+        \hat{x} &= -\dfrac{1 + \ln A}{A}\hat{y} \approx -0.00683317\\[6pt]
+        \delta x &= |\hat{x} - x| \approx 0.00021639
+    \end{aligned}
+\]
+
+Vậy:
+\[
+    SNqR = 10\log_{10}\left(\dfrac{x^2}{(\delta x)^2}\right)
+        \approx 30.26\,\mathrm{dB}
+\]

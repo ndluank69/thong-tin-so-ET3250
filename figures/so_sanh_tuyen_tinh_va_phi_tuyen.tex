@@ -1,0 +1,92 @@
+% So sánh đặc tuyến lượng tử hóa tuyến tính và phi tuyến.
+\begin{tikzpicture}[
+    x=1cm,
+    y=1cm,
+    font=\small,
+    >=stealth,
+    line cap=round,
+    line join=round,
+    axis/.style={->, draw=black!70, line width=0.55pt},
+    staircase/.style={draw=black, line width=1pt},
+    note/.style={red!80!black, line width=0.55pt},
+    step size/.style={note, <->},
+    axis label/.style={inner sep=1pt, text=black!80},
+    binary label/.style={note, anchor=east, inner sep=1pt}
+]
+    \def\quantizerOffset{8.70cm}
+
+    % Hai hệ trục dùng cùng một tỉ lệ để so sánh độ cao các bậc.
+    \foreach \offset in {0cm,\quantizerOffset} {
+        \begin{scope}[xshift=\offset]
+            \draw[axis] (-2.83,0) -- (2.92,0);
+            \draw[axis] (0,-2.60) -- (0,2.85);
+            \node[axis label, anchor=south east] at (-0.06,2.60) {Output};
+            \node[axis label, anchor=north east] at (2.80,-0.08) {Input};
+            \node[note, anchor=west, inner sep=1pt] at (2.99,0) {$x$};
+            \node[binary label, font=\small\bfseries] at (-0.52,1.85) {Số nhị phân};
+        \end{scope}
+    }
+
+    % Tuyến tính: các bậc có cùng độ rộng và độ cao.
+    \foreach \direction in {-1,1} {
+        \begin{scope}[scale=\direction]
+            \draw[staircase] (0,0) -- (0,0.16)
+                \foreach \step in {1,...,7} {
+                    -| ({0.33*\step},{0.16+0.33*\step})
+                }
+                -- (2.64,2.47);
+        \end{scope}
+    }
+
+    \draw[note, ->] (-0.94,2.36) -- (-1.46,2.08);
+    \foreach \code/\labelx/\labely/\stepx/\stepy in {
+        000/-0.67/0.35/0.15/0.16,
+        001/-0.41/0.74/0.48/0.49,
+        010/-0.15/1.13/0.81/0.82
+    } {
+        \node[binary label] at (\labelx,\labely) {\texttt{\code}};
+        \draw[note] (\labelx,\labely) -- (\stepx,\stepy);
+    }
+    \draw[note] (1.98,1.81) -- (2.91,1.81);
+    \draw[note] (2.31,2.14) -- (2.91,2.14);
+    \draw[step size] (2.80,1.81) -- (2.80,2.14);
+    \node[note, anchor=west, inner sep=1pt] at (2.98,1.975)
+        {$\Delta x = \mathrm{const}$};
+    \node[anchor=north] at (0,-2.91) {(b) Lượng tử hóa tuyến tính};
+
+    % Phi tuyến: các bậc nhỏ gần gốc và lớn dần khi xa gốc.
+    \begin{scope}[xshift=\quantizerOffset]
+        \foreach \direction in {-1,1} {
+            \begin{scope}[scale=\direction]
+                \draw[staircase] (0,0) -- (0,0.10)
+                    -| (0.15,0.25) -| (0.34,0.43) -| (0.59,0.66)
+                    -| (0.92,0.96) -| (1.33,1.34) -| (1.85,1.84)
+                    -| (2.47,2.47) -- (2.77,2.47);
+            \end{scope}
+        }
+
+        % Đặt các mã ở cùng vị trí tương đối như bên tuyến tính.
+        \foreach \code/\labelx/\labely/\stepx/\stepy in {
+            000/-0.67/0.35/0.075/0.10,
+            001/-0.41/0.74/0.245/0.25,
+            010/-0.15/1.13/0.465/0.43
+        } {
+            \node[binary label] at (\labelx,\labely) {\texttt{\code}};
+            \draw[note] (\labelx,\labely) -- (\stepx,\stepy);
+        }
+
+        \draw[note] (0.92,0.66) -- (1.80,0.66);
+        \draw[note] (1.33,0.96) -- (1.80,0.96);
+        \draw[step size] (1.70,0.66) -- (1.70,0.96);
+        \node[note, anchor=west, inner sep=1pt] at (1.87,0.81) {$\Delta x_i$};
+
+        \draw[note] (2.47,1.84) -- (3.22,1.84);
+        \draw[note] (2.77,2.47) -- (3.22,2.47);
+        \draw[step size] (3.12,1.84) -- (3.12,2.47);
+        \node[note, anchor=west, inner sep=1pt] at (3.29,2.155) {$\Delta x_j$};
+
+        \node[note, anchor=west, inner sep=1pt] at (1.57,-1.12)
+            {$\Delta x_i \ne \Delta x_j$};
+        \node[anchor=north] at (0,-2.91) {(a) Lượng tử hóa phi tuyến};
+    \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+% Sơ đồ nén biên độ và lượng tử hóa tuyến tính theo luật A.
+\begin{tikzpicture}[
+    color=black,
+    line width=1.15pt,
+    line cap=round,
+    block/.style={
+        draw,
+        minimum width=3.90cm,
+        minimum height=2.55cm,
+        inner sep=5pt,
+        align=center
+    },
+    signal label/.style={above=3pt, inner sep=1pt}
+]
+    \node[block] (compressor) at (4.20,0) {$y = f(x)$};
+    \node[block] (quantizer) at (10.10,0) {\textbf{LTH tuyến tính}\\[5pt]
+        $\displaystyle \Delta y = \frac{1}{128}$\\[5pt]
+        $Y_{\max} = -Y_{\min} = 1$};
+
+    \draw (0,0) -- node[signal label] {$x$} (compressor.west);
+    \draw (compressor.east) -- node[signal label] {$y$} (quantizer.west);
+    \draw (quantizer.east) -- node[signal label] {8~bit} (14.45,0);
+\end{tikzpicture}

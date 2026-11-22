@@ -1,0 +1,24 @@
+% Mẫu tín hiệu có biên độ x = -0.00704956.
+\begin{tikzpicture}[x=1cm, y=1cm, line cap=round]
+    \definecolor{nonlinearsampleblue}{RGB}{0, 153, 255}
+    \definecolor{nonlinearsampletip}{RGB}{248, 249, 253}
+
+    \path[use as bounding box] (-0.80,-4.23) rectangle (5.58,0.55);
+    \draw[black!70, line width=0.45pt] (0,0) -- (5,0);
+
+    \coordinate (sample) at (1.14,-3.45);
+    \draw[nonlinearsampleblue, line width=0.5pt] (1.14,0) -- (sample);
+    \draw[nonlinearsampleblue!75, line width=0.45pt] (3.38,0) -- (3.38,-1.73);
+
+    \path[draw=black!45, fill=nonlinearsampletip,
+        rounded corners=1.5pt, line width=0.55pt]
+        (1.17,-3.40) rectangle (4.71,-1.73);
+    \node[anchor=west, inner sep=0pt, font=\sffamily\small, text=black!70]
+        at (1.41,-2.30) {X};
+    \node[anchor=west, inner sep=0pt, font=\sffamily\small\bfseries,
+        text=nonlinearsampleblue] at (1.86,-2.90) {-0.00704956};
+
+    \draw[nonlinearsampleblue!70, fill=white, line width=0.5pt]
+        (sample) circle[radius=3.4pt];
+    \fill[black!80] (sample) circle[radius=2.2pt];
+\end{tikzpicture}

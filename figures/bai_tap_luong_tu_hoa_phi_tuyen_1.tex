@@ -1,0 +1,22 @@
+% Mẫu tín hiệu có biên độ x = 0.115784.
+\begin{tikzpicture}[x=1cm, y=1cm, line cap=round]
+    \definecolor{nonlinearsampleblue}{RGB}{0, 153, 255}
+    \definecolor{nonlinearsampletip}{RGB}{248, 249, 253}
+
+    \path[use as bounding box] (-0.50,-0.28) rectangle (5.34,5.16);
+    \draw[black!70, line width=0.45pt] (0,0) -- (5,0);
+    \foreach \tick in {1.32,4.63} {
+        \draw[black!65, line width=0.4pt] (\tick,4.90) -- (\tick,4.81);
+    }
+
+    \coordinate (sample) at (1.30,3.56);
+    \draw[nonlinearsampleblue, line width=0.5pt] (1.30,0) -- (sample);
+    \draw[nonlinearsampleblue, fill=white, line width=0.5pt]
+        (sample) circle[radius=3.4pt];
+
+    \node[anchor=south west, draw=black!45, fill=nonlinearsampletip,
+        rounded corners=1.5pt, line width=0.55pt, inner sep=5pt,
+        minimum width=2.70cm, minimum height=1.10cm, font=\sffamily\small,
+        text=black!70] at (1.37,3.62)
+        {X\enspace\textcolor{nonlinearsampleblue}{\bfseries 0.115784}};
+\end{tikzpicture}

@@ -1,12 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1795319936.63366 "main.xdv" "main.pdf" "main" 1795319936.68033 0
-  "main.xdv" 1795319936.58189 201808 f3eee3d4f9ae766282389fb5bd45a175 "xelatex"
+["xdvipdfmx"] 1795365404.60485 "main.xdv" "main.pdf" "main" 1795365404.69452 0
+  "main.xdv" 1795365404.48602 259288 d8cc32e6da9f10333571924c4726d911 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1795319935.41596 "/home/luan/Desktop/LaTex/thong-tin-so-ET3250/main.tex" "main.xdv" "main" 1795319936.67821 0
+["xelatex"] 1795365402.12509 "main.tex" "main.xdv" "main" 1795365404.69058 0
   "/etc/texmf/web2c/texmf.cnf" 1793758346.90459 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/luan/Desktop/LaTex/thong-tin-so-ET3250/main.tex" 1795006941.55299 1875 c014af306276043cfbede57f94308ccf ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -221,22 +220,26 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1769369718 41603 27f93b3067076450172040dcd57ca8b3 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1793798592 4456295 f602d9c76c80aa3564c6a6a74a9d610c ""
   "chapters/bang_quy_doi.tex" 1795008267.60719 1736 b69f27c95ac179986fcdfdf106cb6569 ""
-  "chapters/bien_doi_tin_hieu_tuong_tư_so_va_so_tuong_tu.tex" 1795319935.30846 8769 0eccbbccf53ba8edb31fe59b683d95a0 ""
+  "chapters/bien_doi_tin_hieu_tuong_tư_so_va_so_tuong_tu.tex" 1795365397.64157 14306 4667074f7f556f2cbf0e54def00aebbe ""
   "chapters/khai_niem_co_ban.tex" 1794403338.9245 6710 75f49d0d7d64b19a90d3e2fb0ed6ad16 ""
   "figures/bai_tap_luong_tu_hoa_1.tex" 1795009402.00693 2963 d4a450eb86537ee6dd4cfdcc2e7bbb7d ""
   "figures/bai_tap_luong_tu_hoa_2.tex" 1795009758.1319 1899 ff58db69a4451061b0f910cf20a846ad ""
+  "figures/bai_tap_luong_tu_hoa_phi_tuyen_1.tex" 1795363803.30747 1002 a2325a3d6b3e3bf923b05c7b672e335c ""
+  "figures/bai_tap_luong_tu_hoa_phi_tuyen_2.tex" 1795363834.09552 1090 a38f56d551c400cd38f7355db164fa1c ""
   "figures/bai_tap_tin_hieu_4_muc.tex" 1794403338.9245 1262 8ec859c3429bf7f1789b1ebac4f01002 ""
   "figures/bai_tap_tin_hieu_8_muc.tex" 1794403338.92463 1302 dd62b035bf96aaa592e4f454ecffcfdf ""
   "figures/giai_bai_tap_tin_hieu_4_muc.tex" 1794403338.92463 1979 d2836e9791df504bcda755c68c78050f ""
   "figures/giai_bai_tap_tin_hieu_8_muc.tex" 1794403338.92463 1676 97ebb19d038a6ca6324d694d88124dc0 ""
+  "figures/luong_tu_hoa_phi_tuyen_theo_luat_A.tex" 1795363650.8884 810 67c7ab72fed70b4b7396e15ca61c69ab ""
   "figures/luong_tu_hoa_tuyen_tinh.tex" 1794641142.87773 2007 c5f6dc552bdf2bca70c063909ad0f5e2 ""
+  "figures/so_sanh_tuyen_tinh_va_phi_tuyen.tex" 1795361056.76232 3735 a791a9627f8293f1a0b2cda59ceb1677 ""
   "figures/tin_hieu_lay_mau.tex" 1794403338.92463 2047 ce3b516c8f73c7b184c9082707242185 ""
   "figures/tin_hieu_so.tex" 1794403338.92463 1382 78b817b437b1f093c95934315d594096 ""
   "figures/tin_hieu_tuong_tu.tex" 1794403338.92463 1660 e58c1c04ec9e187b7e5db5181c23158b ""
-  "main.aux" 1795319936.58089 2865 0be3c08f3019fa61c8102f3918b60c25 "xelatex"
-  "main.out" 1795319936.58189 3389 6d501ee25ee8680c82311a0a38107b35 "xelatex"
+  "main.aux" 1795365404.48361 3483 dc435a762f43b4f1822efa11587090c2 "xelatex"
+  "main.out" 1795365404.48462 4529 ee273793806c1779ab1be2135a26b68a "xelatex"
   "main.tex" 1795006941.55299 1875 c014af306276043cfbede57f94308ccf ""
-  "main.toc" 1795319936.58189 1741 ea7ca2674274515a561d47253c811abb "xelatex"
+  "main.toc" 1795365404.48602 2195 8b67d1425e6b065dc25255e5edf502b0 "xelatex"
   (generated)
   "main.aux"
   "main.log"
