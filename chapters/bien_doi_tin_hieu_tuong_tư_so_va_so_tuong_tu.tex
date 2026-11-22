@@ -183,7 +183,7 @@ Biết $N_{max} = 16$; $\quad X_{max} = -X_{min} = 1$
 Tính SNqR?
 
 \begin{center}
-    \input{figures/bai_tap_luong_tu_hoa.tex}
+    \input{figures/bai_tap_luong_tu_hoa_1.tex}
 \end{center}
 
 \begin{center}
@@ -227,3 +227,66 @@ Vậy:
              &= 15.39 \quad (dB)
     \end{aligned}
 \]
+
+\noindent\textbf{Ví dụ:} Một USB có dụng lượng 2 GB dùng để lưu trữ tín hiệu video biết dải tần video là 0 - 6.5 MHz. Một mẫu mã hóa 20 bit. Tính xem USB lưu trữ được video có thời gian là bao lâu:
+
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+\textbf{Dữ kiện:}
+
+\hspace*{0.5cm}- Dung lượng USB: C = 2 GiB = $2 \cdot 2^{30}$ B = $16 \cdot 2^{30}$ bit
+
+\hspace*{0.5cm}- Dải tần video: 0 - 6.5 MHz
+
+\hspace*{0.5cm}- Số bit mã hóa trên một mẫu: n = 20 bit
+
+\vspace{0.5cm}
+
+Theo định lý Nyquist:
+\[
+    F_s \geq 2 \cdot f_{max}
+\]
+
+Ta chọn tần số lấy mẫu tối thiểu: $F_{s_{min}} = 2 \cdot 6.5 = 13$ (MHz)
+
+Tốc độ bit mã hóa là: 
+\[
+    \begin{aligned}
+        v_b &= n \cdot F_s\\[6pt]
+            &= 20 \cdot 13 \cdot 10^6\\[6pt]
+            &= 260 \cdot 10^6
+    \end{aligned}
+\]
+
+Thời gian lưu trữ:
+\[
+    t = \dfrac{C}{v_b}\\[6pt] = \dfrac{16 \cdot 2^{30}}{260 \cdot 10^6}\\[6pt] = 66.08 (s)
+\]
+
+\newpage
+
+\noindent\textbf{Ví dụ:} Biết $X_{max} = -X_{min} = 1$ và $N_{max} = 256$. Mã hóa mẫu tín hiệu ở hình thành số nhị phân.
+
+\begin{center}
+    \input{figures/bai_tap_luong_tu_hoa_2.tex}
+\end{center}
+
+\begin{center}
+    \textbf{Giải}
+\end{center}
+
+Số bit mã hóa trên một mẫu: $n = \log_2(N_{max}) = \log_2(256) = 8$
+
+Ta có biên độ của một mức là: 
+\[
+    \Delta x = \dfrac{X_{max} - X_{min}}{N_{max}} = \dfrac{1 - (-1)}{256} = \dfrac{1}{128}
+\]
+
+Biên độ của xung là: 
+\[
+    N = round\left(\dfrac{x}{\Delta x}\right) = round\left(\dfrac{0.506683}{1/128}\right) = 65
+\]
+
+Vì tín hiệu dương $\rightarrow$ bit đầu tiên là: \textcolor{red}{0} 1000001

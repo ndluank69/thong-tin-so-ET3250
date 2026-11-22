@@ -1,0 +1,43 @@
+% Bảng quy đổi đơn vị dữ liệu; chèn bằng \input{chapters/bang_quy_doi.tex}.
+\chapter*{Bảng quy đổi đơn vị}
+\addcontentsline{toc}{chapter}{Bảng quy đổi đơn vị}
+\begingroup
+    \small
+    \setlength{\tabcolsep}{5pt}
+    \renewcommand{\arraystretch}{1.8}
+
+    \noindent
+    \begin{tabularx}{\linewidth}{@{}
+        >{\raggedright\arraybackslash}p{0.26\linewidth}
+        >{\raggedright\arraybackslash}p{0.20\linewidth}
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}X@{}}
+        \textbf{Đơn vị} & \textbf{Ký hiệu}
+            & \textbf{Hệ thập phân (1000)} & \textbf{Hệ nhị phân (1024)} \\
+        \hline
+        Bit & b & $1/8\,\mathrm{B}$ & $1/8\,\mathrm{B}$ \\
+        \hline
+        Byte & B & $1\,\mathrm{B}$ & $1\,\mathrm{B}$ \\
+        \hline
+        Kilobyte / Kibibyte & KB / KiB & $10^{3}\,\mathrm{B}$ & $2^{10}\,\mathrm{B}$ \\
+        \hline
+        Megabyte / Mebibyte & MB / MiB & $10^{6}\,\mathrm{B}$ & $2^{20}\,\mathrm{B}$ \\
+        \hline
+        Gigabyte / Gibibyte & GB / GiB & $10^{9}\,\mathrm{B}$ & $2^{30}\,\mathrm{B}$ \\
+        \hline
+        Terabyte / Tebibyte & TB / TiB & $10^{12}\,\mathrm{B}$ & $2^{40}\,\mathrm{B}$ \\
+        \hline
+        Petabyte / Pebibyte & PB / PiB & $10^{15}\,\mathrm{B}$ & $2^{50}\,\mathrm{B}$ \\
+    \end{tabularx}
+    \par
+\endgroup
+
+\medskip
+\noindent\textbf{Ghi nhớ:}
+\begin{itemize}
+    \item \textbf{1 Byte = 8 bit.}
+    \item \textbf{Hệ thập phân:} Mỗi bậc $\times 1000$.
+    \item \textbf{Hệ nhị phân:} Mỗi bậc $\times 1024$.
+    \item \textbf{Đổi từ đơn vị lớn sang nhỏ:} Nhân.
+    \item \textbf{Đổi từ đơn vị nhỏ sang lớn:} Chia.
+\end{itemize}

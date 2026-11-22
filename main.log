@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025/Debian) (preloaded format=xelatex 2026.11.4)  14 NOV 2026 14:53
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025/Debian) (preloaded format=xelatex 2026.11.4)  22 NOV 2026 10:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -767,16 +767,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- (./chapters/khai_niem_co_ban.tex [1
+ (./chapters/bang_quy_doi.tex [1
+
+]) (./chapters/khai_niem_co_ban.tex [2
 
 ]
 Chapter 1.
-(./figures/tin_hieu_tuong_tu.tex) [2
+(./figures/tin_hieu_tuong_tu.tex) [3
 
 ] (./figures/tin_hieu_so.tex)
 LaTeX Font Info:    Font shape `TU/DejaVuSerif(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/DejaVuSerif(0)/m/it' tried instead on input line 83.
- [3] (./figures/bai_tap_tin_hieu_4_muc.tex) (./figures/giai_bai_tap_tin_hieu_4_muc.tex) [4] (./figures/bai_tap_tin_hieu_8_muc.tex) (./figures/giai_bai_tap_tin_hieu_8_muc.tex) [5]
+ [4] (./figures/bai_tap_tin_hieu_4_muc.tex) (./figures/giai_bai_tap_tin_hieu_4_muc.tex) [5] (./figures/bai_tap_tin_hieu_8_muc.tex) (./figures/giai_bai_tap_tin_hieu_8_muc.tex) [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 183.
@@ -865,7 +867,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 223.
 
-[6]
+[7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 235.
@@ -874,37 +876,40 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 235.
 
-) (./chapters/bien_doi_tin_hieu_tuong_tư_so_va_so_tuong_tu.tex [7]
+) (./chapters/bien_doi_tin_hieu_tuong_tư_so_va_so_tuong_tu.tex [8]
 Chapter 2.
-(./figures/tin_hieu_tuong_tu.tex) (./figures/tin_hieu_lay_mau.tex) [8
+(./figures/tin_hieu_tuong_tu.tex) (./figures/tin_hieu_lay_mau.tex) [9
 
 ] (./figures/luong_tu_hoa_tuyen_tinh.tex)
 Overfull \vbox (1.03125pt too high) has occurred while \output is active []
 
- [9]
+ [10]
 Overfull \vbox (1.03125pt too high) has occurred while \output is active []
 
- [10] (./figures/bai_tap_luong_tu_hoa.tex)
+ [11] (./figures/bai_tap_luong_tu_hoa_1.tex)
 Overfull \vbox (1.03125pt too high) has occurred while \output is active []
 
- [11])
+ [12]
 Overfull \vbox (1.03125pt too high) has occurred while \output is active []
 
- [12] (./main.aux)
+ [13] (./figures/bai_tap_luong_tu_hoa_2.tex))
+Overfull \vbox (1.03125pt too high) has occurred while \output is active []
+
+ [14] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 318091D25726D4F00009157CF40725FB;3218.
+(rerunfilecheck)             Checksum: 6D501EE25EE8680C82311A0A38107B35;3389.
  ) 
 Here is how much of TeX's memory you used:
- 39672 strings out of 470158
- 999014 string characters out of 5477572
- 1484378 words of memory out of 5000000
- 67659 multiletter control sequences out of 15000+600000
+ 39703 strings out of 470158
+ 999794 string characters out of 5477572
+ 1484569 words of memory out of 5000000
+ 67684 multiletter control sequences out of 15000+600000
  645738 words of font info for 139 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  102i,13n,107p,772b,1009s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (13 pages, 182964 bytes).
+Output written on main.xdv (15 pages, 201808 bytes).
