@@ -425,20 +425,14 @@ Với A = 87.6
 Ta có:
 \[
     \begin{aligned}
-        \dfrac{1}{A} < |x| < 1\\[6pt]
+        \dfrac{1}{A} = 0.01141553 < |x| = 0.115784 < 1\\[6pt]
     \end{aligned}
 \]
 
 Vậy, ta sử dụng công thức:
 \[
-    F(x) = \dfrac{1 + \ln(A|x|)}{1 + \ln A}
-\]
-
-Do đó:
-\[
     \begin{aligned}
-        y &= F(x)\\[6pt]
-          &= \dfrac{1 + \ln(A|x|)}{1 + \ln A}\\[6pt]
+        y = F(x) &= \dfrac{1 + \ln(A|x|)}{1 + \ln A}\\[6pt]
           &= \dfrac{1 + \ln(87.6 * 0.115784)}{1 + \ln(87.6)}\\[6pt]
           &= 0.606045
     \end{aligned}
@@ -448,12 +442,29 @@ Sau đó, ta thực hiện lượng tử hóa tuyến tính:
 \[
     \begin{aligned}
         N &= round\left(\dfrac{y}{\Delta_y}\right)\\[6pt]
-          &= round\left(\dfrac{0.606045}{1/128}\right)\\[6pt]
-          &= 78
+          &= round\left(\dfrac{0.606045}{1/128}\right) = 78
     \end{aligned}
 \]
 
-Vì tín hiệu dương $\rightarrow$ bit đầu tiên là: \textcolor{red}{0} 1001110
+Vì tín hiệu dương $\rightarrow$ \textcolor{red}{0} 1001110
+
+Để tính SNqR, ta khôi phục tín hiệu ban đầu:
+\[
+    \hat{y} = N * \Delta_y = 0.609375
+\]
+
+Sau đó, ta có:
+\[
+    \begin{aligned}
+        &\hat{y} = \dfrac{1 + \ln(A|\hat{x}|)}{1 + \ln(A)} \rightarrow \hat{x} = 0.117913\\[6pt]
+        \rightarrow \quad &\delta_x = |\hat{x} - x| = 0.002129
+    \end{aligned}
+\]
+
+Vậy:
+\[
+    SNqR = 10\log\left(\dfrac{S}{N}\right) = 10 \log\left(\dfrac{x^2}{(\delta_x)^2}\right) = 34.7
+\]
 
 \newpage
 
@@ -471,7 +482,7 @@ Ta có:
     0 < |x| = 0.00704956 < \dfrac{1}{A} \approx 0.01141553
 \]
 
-Vậy, ta sử dụng nhánh tuyến tính của hàm nén:
+Vậy, ta sử dụng công thức:
 \[
     \begin{aligned}
         y &= F(x) = \dfrac{A|x|}{1 + \ln A}\\[6pt]
@@ -488,9 +499,9 @@ Sau đó, ta thực hiện lượng tử hóa tuyến tính:
     \end{aligned}
 \]
 
-Vì tín hiệu âm, bit dấu là \textcolor{red}{1}. Mức $14$ được biểu diễn bằng 7 bit là \texttt{0001110}, nên từ mã 8 bit là \texttt{\textcolor{red}{1}0001110}.
+Vì tín hiệu âm $\rightarrow$ \textcolor{red}{1} 0001110.
 
-Để tính SNqR, ta khôi phục biên độ từ mức lượng tử và bit dấu:
+Để tính SNqR, ta khôi phục tín hiệu ban đầu:
 \[
     \begin{aligned}
         \hat{y} &= N\Delta_y = \dfrac{14}{128} = 0.109375\\[6pt]
@@ -504,3 +515,8 @@ Vậy:
     SNqR = 10\log_{10}\left(\dfrac{x^2}{(\delta x)^2}\right)
         \approx 30.26\,\mathrm{dB}
 \]
+
+\subsection{Phương pháp nén giãn số}
+\begin{center}
+    \input{figures/phuong_phap_nen_gian_so.tex}
+\end{center}

@@ -1,0 +1,32 @@
+% Sơ đồ phương pháp nén giãn số: lượng tử hóa tuyến tính 12 bit rồi nén số xuống 8 bit.
+\begin{tikzpicture}[
+    font=\large,
+    line cap=round,
+    line join=round,
+    block/.style={
+        draw,
+        line width=1.2pt,
+        minimum width=4.9cm,
+        minimum height=2.0cm,
+        align=center
+    }
+]
+    % Khối lượng tử hóa tuyến tính.
+    \node[block] (lth) at (0, 0)
+        {\textbf{LTH tuyến tính}\\[4pt] $\Delta x = \dfrac{1}{2048}$};
+
+    % Khối nén số.
+    \node[block] (nen) at (7.3, 0) {\textbf{Nén số}};
+
+    % Tín hiệu vào x.
+    \draw[line width=1.2pt] ([xshift=-1.6cm]lth.west) -- (lth.west);
+    \node[anchor=south west] at ([xshift=-1.6cm, yshift=1pt]lth.west) {$x$};
+
+    % Đường nối 12 bit giữa hai khối.
+    \draw[-stealth, line width=1.2pt] (lth.east) -- (nen.west)
+        node[midway, above] {\textbf{12 bit}};
+
+    % Đầu ra 8 bit.
+    \draw[line width=1.2pt] (nen.east) -- ++(1.9, 0)
+        node[midway, above] {\textbf{8 bit}};
+\end{tikzpicture}

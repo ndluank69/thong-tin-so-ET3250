@@ -440,6 +440,9 @@ INPUT figures/bai_tap_luong_tu_hoa_phi_tuyen_1.tex
 INPUT ./figures/bai_tap_luong_tu_hoa_phi_tuyen_2.tex
 INPUT ./figures/bai_tap_luong_tu_hoa_phi_tuyen_2.tex
 INPUT figures/bai_tap_luong_tu_hoa_phi_tuyen_2.tex
+INPUT ./figures/phuong_phap_nen_gian_so.tex
+INPUT ./figures/phuong_phap_nen_gian_so.tex
+INPUT figures/phuong_phap_nen_gian_so.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
